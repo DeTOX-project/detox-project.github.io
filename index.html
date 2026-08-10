@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>DeTOX Project</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -15,183 +27,662 @@
       line-height: 1.6;
     }
 
-    /* Navigation */
+
+    /* =========================================================
+       Navigation
+       ========================================================= */
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 22px 8%;
-      border-bottom: 1px solid #eeeeee;
+
+      padding: 20px 5%;
+
+      background: #ffffff;
+
+      border-bottom: 1px solid #e8e8e8;
+
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    .logo {
-      font-size: 26px;
-      font-weight: bold;
-      letter-spacing: 1px;
+
+    .nav-logo {
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
-    nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #333;
-      font-size: 15px;
-    }
 
-    /* Hero */
-    .hero {
-      min-height: 65vh;
+    .nav-links {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 8%;
-      background: #f3f5f3;
+      align-items: center;
+      gap: 30px;
     }
 
-    .hero h1 {
-      font-size: 72px;
-      margin: 0;
-      letter-spacing: -2px;
-    }
 
-    .hero p {
-      max-width: 650px;
-      font-size: 22px;
-      margin-top: 18px;
-      color: #555;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #222;
-      color: white;
+    .nav-links a {
+      color: #333;
       text-decoration: none;
-      width: fit-content;
+      font-size: 15px;
+      transition: opacity 0.2s ease;
     }
 
-    /* Main sections */
-    section {
-      padding: 80px 8%;
+
+    .nav-links a:hover {
+      opacity: 0.55;
     }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 670px;
+
+      padding: 55px 4% 60px;
+
+      background: #eef3f3;
+
+      display: grid;
+
+      grid-template-columns: 1.05fr 0.95fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    /* -------------------------
+       LEFT SIDE
+       ------------------------- */
+
+    .hero-left {
+      max-width: 720px;
+    }
+
+
+    .detox-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 8px;
+    }
+
+
+    .detox-title h1 {
+      margin: 0;
+
+      font-size: 82px;
+
+      font-weight: 700;
+
+      line-height: 1;
+
+      letter-spacing: -3px;
+
+      color: #202020;
+    }
+
+
+    .globe {
+      width: 150px;
+
+      height: 150px;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    .project-title {
+      margin-top: 42px;
+
+      margin-bottom: 0;
+
+      max-width: 670px;
+
+      font-size: 26px;
+
+      font-weight: 400;
+
+      line-height: 1.35;
+
+      color: #444;
+    }
+
+
+    .project-intro {
+      margin-top: 62px;
+
+      margin-bottom: 0;
+
+      max-width: 700px;
+
+      font-size: 18px;
+
+      line-height: 1.5;
+
+      color: #444;
+    }
+
+
+    .partner-logos {
+      margin-top: 35px;
+
+      max-width: 650px;
+    }
+
+
+    .partner-logos img {
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+    }
+
+
+    /* -------------------------
+       RIGHT SIDE
+       ------------------------- */
+
+    .hero-right {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      gap: 18px;
+    }
+
+
+    .hero-right img {
+      width: 100%;
+
+      height: auto;
+
+      display: block;
+
+      border-radius: 5px;
+
+      background: white;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .hero-right img:hover {
+      transform: translateY(-3px);
+
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+       ========================================================= */
+
+    section {
+      padding: 85px 8%;
+    }
+
+
+    section:nth-of-type(even) {
+      background: #fafafa;
+    }
+
+
+    .section-inner {
+      max-width: 1150px;
+
+      margin: 0 auto;
+    }
+
 
     section h2 {
-      font-size: 34px;
+      margin-top: 0;
+
       margin-bottom: 25px;
+
+      font-size: 36px;
+
+      line-height: 1.2;
+
+      font-weight: 600;
     }
+
+
+    section p {
+      max-width: 820px;
+
+      font-size: 18px;
+
+      color: #444;
+    }
+
+
+    /* =========================================================
+       RESEARCH CARDS
+       ========================================================= */
 
     .themes {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 35px;
+
+      gap: 24px;
+
+      margin-top: 40px;
     }
+
 
     .card {
       padding: 30px;
+
+      background: #ffffff;
+
       border: 1px solid #dddddd;
-      border-radius: 4px;
+
+      border-radius: 6px;
     }
+
 
     .card h3 {
       margin-top: 0;
+
+      margin-bottom: 14px;
+
+      font-size: 21px;
     }
 
-    /* Footer */
+
+    .card p {
+      margin-bottom: 0;
+
+      font-size: 16px;
+    }
+
+
+    /* =========================================================
+       PEOPLE
+       ========================================================= */
+
+    .people-note {
+      max-width: 850px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
     footer {
-      padding: 35px 8%;
+      padding: 38px 8%;
+
       background: #222;
-      color: #ddd;
+
+      color: #dddddd;
+
       font-size: 14px;
     }
 
-    /* Mobile */
-    @media (max-width: 800px) {
 
-      .hero h1 {
-        font-size: 50px;
+    .footer-inner {
+      max-width: 1150px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 30px;
+    }
+
+
+    .footer-inner a {
+      color: #ffffff;
+
+      text-decoration: none;
+    }
+
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 950px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 45px 7% 55px;
       }
+
+
+      .hero-left {
+        max-width: none;
+      }
+
+
+      .hero-right {
+        max-width: 760px;
+      }
+
+
+      .detox-title h1 {
+        font-size: 64px;
+      }
+
+
+      .globe {
+        width: 115px;
+
+        height: 115px;
+      }
+
+
+      .project-title {
+        margin-top: 30px;
+
+        font-size: 23px;
+      }
+
+
+      .project-intro {
+        margin-top: 36px;
+      }
+
 
       .themes {
         grid-template-columns: 1fr;
       }
 
-      nav .links {
+    }
+
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 18px 6%;
+      }
+
+
+      .nav-links {
         display: none;
       }
+
+
+      .detox-title h1 {
+        font-size: 52px;
+
+        letter-spacing: -2px;
+      }
+
+
+      .globe {
+        width: 90px;
+
+        height: 90px;
+      }
+
+
+      .project-title {
+        font-size: 21px;
+      }
+
+
+      .project-intro {
+        font-size: 17px;
+      }
+
+
+      section {
+        padding: 65px 7%;
+      }
+
+
+      section h2 {
+        font-size: 30px;
+      }
+
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
 
-  <nav>
-    <div class="logo">DeTOX</div>
 
-    <div class="links">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#people">People</a>
-      <a href="#contact">Contact</a>
+  <!-- =======================================================
+       Navigation
+       ======================================================= -->
+
+  <nav>
+
+    <div class="nav-logo">
+      DeTOX
     </div>
+
+    <div class="nav-links">
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#research">
+        Research
+      </a>
+
+      <a href="#people">
+        People
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
   </nav>
 
 
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
   <header class="hero">
 
-    <h1>DeTOX</h1>
 
-    <p>
-      A collaborative research project bringing together researchers
-      across institutions to address important scientific challenges.
-    </p>
+    <!-- LEFT -->
 
-    <a class="button" href="#about">
-      Explore the project
-    </a>
+    <div class="hero-left">
+
+
+      <div class="detox-title">
+
+        <h1>
+          DeTOX
+        </h1>
+
+        <img
+          src="images/globe.gif"
+          class="globe"
+          alt="Rotating globe">
+
+      </div>
+
+
+      <h2 class="project-title">
+
+        Determination of Tropical Oxidising Capacity through
+        model calibration.
+
+      </h2>
+
+
+      <p class="project-intro">
+
+        A new collaboration between atmospheric scientists and experts
+        in machine learning. In addition to improved insight into
+        oxidation processes, a key outcome will be development of new
+        statistical methodologies that will benefit the wider
+        atmospheric chemistry and climate communities.
+
+      </p>
+
+
+      <div class="partner-logos">
+
+        <img
+          src="images/partner-logos.png"
+          alt="DeTOX partner universities">
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+    <div class="hero-right">
+
+
+      <img
+        src="images/work-programme.png"
+        alt="DeTOX work programme">
+
+
+      <img
+        src="images/results.png"
+        alt="DeTOX research results">
+
+
+    </div>
+
 
   </header>
 
 
+
+  <!-- =======================================================
+       ABOUT
+       ======================================================= -->
+
   <section id="about">
 
-    <h2>About DeTOX</h2>
+    <div class="section-inner">
 
-    <p>
-      DeTOX is a collaborative research project involving researchers
-      from universities in the UK and internationally.
-      This website will share our research, people, outputs and project updates.
-    </p>
+      <h2>
+        About DeTOX
+      </h2>
+
+      <p>
+
+        DeTOX brings together atmospheric scientists and experts in
+        machine learning to improve our understanding of tropical
+        atmospheric oxidation and develop new approaches for
+        constraining atmospheric chemistry models.
+
+      </p>
+
+    </div>
 
   </section>
 
 
+
+  <!-- =======================================================
+       RESEARCH
+       ======================================================= -->
+
   <section id="research">
 
-    <h2>Our Research</h2>
+    <div class="section-inner">
 
-    <div class="themes">
+      <h2>
+        Our Research
+      </h2>
 
-      <div class="card">
-        <h3>Research Theme 01</h3>
-        <p>
-          A short description of the first major area of the project.
-        </p>
-      </div>
 
-      <div class="card">
-        <h3>Research Theme 02</h3>
-        <p>
-          A short description of the second major area of the project.
-        </p>
-      </div>
+      <div class="themes">
 
-      <div class="card">
-        <h3>Research Theme 03</h3>
-        <p>
-          A short description of the third major area of the project.
-        </p>
+
+        <div class="card">
+
+          <h3>
+            Tropical oxidation
+          </h3>
+
+          <p>
+            Investigating the processes that govern tropical
+            oxidising capacity and its variability.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Model calibration
+          </h3>
+
+          <p>
+            Using observations and statistical methods to constrain
+            atmospheric chemistry models.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Machine learning
+          </h3>
+
+          <p>
+            Developing new statistical and machine-learning approaches
+            for atmospheric chemistry and climate research.
+          </p>
+
+        </div>
+
+
       </div>
 
     </div>
@@ -199,24 +690,54 @@
   </section>
 
 
+
+  <!-- =======================================================
+       PEOPLE
+       ======================================================= -->
+
   <section id="people">
 
-    <h2>People</h2>
+    <div class="section-inner">
 
-    <p>
-      DeTOX brings together researchers, collaborators and advisers
-      from multiple universities.
-    </p>
+      <h2>
+        People
+      </h2>
+
+      <p class="people-note">
+
+        DeTOX is a collaborative project involving researchers,
+        collaborators and advisers from universities in the UK
+        and internationally.
+
+      </p>
+
+    </div>
 
   </section>
 
 
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
   <footer id="contact">
 
-    DeTOX Project · Collaborative Research Project
+    <div class="footer-inner">
+
+      <div>
+        DeTOX Project
+      </div>
+
+      <div>
+        Determination of Tropical Oxidising Capacity through model calibration
+      </div>
+
+    </div>
 
   </footer>
 
 
 </body>
+
 </html>
