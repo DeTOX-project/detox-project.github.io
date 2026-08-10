@@ -1,13 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeTOX Project</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DeTOX Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 8%;
+      background: #f3f5f3;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      margin: 0;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 22px;
+      margin-top: 18px;
+      color: #555;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #222;
+      color: white;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    /* Main sections */
+    section {
+      padding: 80px 8%;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+
+    .themes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 35px 8%;
+      background: #222;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 800px) {
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .themes {
+        grid-template-columns: 1fr;
+      }
+
+      nav .links {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
+
 <body>
+
+  <nav>
+    <div class="logo">DeTOX</div>
+
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#people">People</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <header class="hero">
+
     <h1>DeTOX</h1>
-    <p>Welcome to the DeTOX project.</p>
+
+    <p>
+      A collaborative research project bringing together researchers
+      across institutions to address important scientific challenges.
+    </p>
+
+    <a class="button" href="#about">
+      Explore the project
+    </a>
+
+  </header>
+
+
+  <section id="about">
+
+    <h2>About DeTOX</h2>
+
+    <p>
+      DeTOX is a collaborative research project involving researchers
+      from universities in the UK and internationally.
+      This website will share our research, people, outputs and project updates.
+    </p>
+
+  </section>
+
+
+  <section id="research">
+
+    <h2>Our Research</h2>
+
+    <div class="themes">
+
+      <div class="card">
+        <h3>Research Theme 01</h3>
+        <p>
+          A short description of the first major area of the project.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Research Theme 02</h3>
+        <p>
+          A short description of the second major area of the project.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Research Theme 03</h3>
+        <p>
+          A short description of the third major area of the project.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="people">
+
+    <h2>People</h2>
+
+    <p>
+      DeTOX brings together researchers, collaborators and advisers
+      from multiple universities.
+    </p>
+
+  </section>
+
+
+  <footer id="contact">
+
+    DeTOX Project · Collaborative Research Project
+
+  </footer>
+
+
 </body>
 </html>
