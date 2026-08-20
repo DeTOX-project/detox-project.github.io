@@ -240,6 +240,69 @@
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
     }
 
+    /* =========================================================
+   PROJECT FACTS
+   ========================================================= */
+
+.project-facts {
+  padding: 0 5%;
+
+  min-height: 112px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e4e7e7;
+  border-bottom: 1px solid #e4e7e7;
+}
+
+
+.fact {
+  min-height: 58px;
+
+  padding: 0 32px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-right: 1px solid #e4e7e7;
+}
+
+
+.fact:first-child {
+  padding-left: 0;
+}
+
+
+.fact:last-child {
+  border-right: none;
+}
+
+
+.fact-label {
+  margin-bottom: 5px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #8a9292;
+}
+
+
+.fact-value {
+  font-size: 17px;
+  font-weight: 500;
+
+  color: #242828;
+}
 
     /* =========================================================
        GENERAL SECTIONS
@@ -606,6 +669,31 @@
 
 
   </header>
+
+<!-- Project facts -->
+<section class="project-facts">
+
+  <div class="fact">
+    <span class="fact-label">Funded by</span>
+    <span class="fact-value">UKRI / NERC</span>
+  </div>
+
+  <div class="fact">
+    <span class="fact-label">Project duration</span>
+    <span class="fact-value">20XX – 20XX</span>
+  </div>
+
+  <div class="fact">
+    <span class="fact-label">Led by</span>
+    <span class="fact-value">University of Exeter</span>
+  </div>
+
+  <div class="fact">
+    <span class="fact-label">Partners</span>
+    <span class="fact-value">5 institutions</span>
+  </div>
+
+</section>
 
 
 
