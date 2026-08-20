@@ -560,6 +560,131 @@
 
 </section>
 
+    /* =========================================================
+   PEOPLE
+   ========================================================= */
+
+.people-intro {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+
+.people-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+
+.person-card {
+  width: 230px;
+
+  padding: 24px 20px 22px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e8e8;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.person-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+
+.person-photo-wrap {
+  width: 110px;
+  height: 110px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #f1f3f3;
+}
+
+
+.person-photo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+
+.person-info h3 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #252929;
+}
+
+
+.person-institution {
+  margin: 5px 0 16px;
+
+  font-size: 14px;
+
+  color: #7b8383;
+}
+
+
+.person-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+
+.tag {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+
+/* WP tags */
+
+.tag-wp {
+  background: #edf4fb;
+  color: #4b78a3;
+}
+
+
+/* Model tags */
+
+.tag-model {
+  background: #f1eef9;
+  color: #7065a3;
+}
 
     /* =========================================================
        FOOTER
