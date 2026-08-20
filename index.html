@@ -346,7 +346,114 @@
       color: #444;
     }
 
+    /* =========================================================
+   ABOUT + UNCERTAINTIES
+   ========================================================= */
 
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    
+    .about-text p {
+      max-width: 600px;
+    }
+    
+    
+    .about-uncertainties {
+      padding-left: 20px;
+    }
+    
+    
+    .uncertainty-title {
+      display: block;
+    
+      margin-bottom: 24px;
+    
+      font-size: 11px;
+      font-weight: 600;
+    
+      letter-spacing: 1.7px;
+    
+      color: #8a9292;
+    }
+    
+    
+    .mini-uncertainty-grid {
+      display: grid;
+    
+      grid-template-columns: repeat(5, 1fr);
+    
+      gap: 16px;
+    }
+    
+    
+    .mini-uncertainty {
+      text-align: center;
+    }
+    
+    
+    .mini-uncertainty svg {
+      width: 72px;
+      height: 72px;
+    
+      display: block;
+    
+      margin: 0 auto 9px;
+    }
+    
+    
+    .mini-uncertainty span {
+      display: block;
+    
+      font-size: 12px;
+      line-height: 1.25;
+    
+      color: #444;
+    }
+    
+    
+    /* subtle hover */
+    
+    .mini-uncertainty {
+      transition: transform 0.2s ease;
+    }
+    
+    
+    .mini-uncertainty:hover {
+      transform: translateY(-3px);
+    }
+    
+    
+    /* tablet / mobile */
+    
+    @media (max-width: 900px) {
+    
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+    
+    
+      .about-uncertainties {
+        padding-left: 0;
+      }
+    
+    }
+    
+    
+    @media (max-width: 600px) {
+    
+      .mini-uncertainty-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    
+    }
+    
     /* =========================================================
        RESEARCH CARDS
        ========================================================= */
@@ -700,28 +807,198 @@
   <!-- =======================================================
        ABOUT
        ======================================================= -->
-
   <section id="about">
 
-    <div class="section-inner">
+  <div class="section-inner about-layout">
 
-      <h2>
-        About DeTOX
-      </h2>
+    <!-- LEFT: About text -->
+
+    <div class="about-text">
+
+      <h2>About DeTOX</h2>
 
       <p>
-
         DeTOX brings together atmospheric scientists and experts in
         machine learning to improve our understanding of tropical
         atmospheric oxidation and develop new approaches for
         constraining atmospheric chemistry models.
-
       </p>
 
     </div>
 
-  </section>
 
+    <!-- RIGHT: Key uncertainties -->
+
+    <div class="about-uncertainties">
+
+      <span class="uncertainty-title">
+        KEY UNCERTAINTIES
+      </span>
+
+
+      <div class="mini-uncertainty-grid">
+
+
+        <!-- Biogenic VOCs -->
+
+        <div class="mini-uncertainty">
+
+          <svg viewBox="0 0 100 100">
+
+            <path d="M50 65 L50 88"
+                  stroke="#8B6748"
+                  stroke-width="5"
+                  stroke-linecap="round"/>
+
+            <circle cx="35" cy="57" r="16" fill="#7BCB86"/>
+            <circle cx="51" cy="45" r="20" fill="#54B96B"/>
+            <circle cx="67" cy="59" r="15" fill="#8AD394"/>
+
+            <path d="M38 34 C30 26, 39 20, 34 12"
+                  fill="none"
+                  stroke="#58BFC7"
+                  stroke-width="3"
+                  stroke-linecap="round"/>
+
+            <path d="M55 27 C49 20, 57 14, 53 8"
+                  fill="none"
+                  stroke="#E7B94C"
+                  stroke-width="3"
+                  stroke-linecap="round"/>
+
+          </svg>
+
+          <span>Biogenic VOCs</span>
+
+        </div>
+
+
+        <!-- Lightning NOx -->
+
+        <div class="mini-uncertainty">
+
+          <svg viewBox="0 0 100 100">
+
+            <circle cx="38" cy="40" r="16" fill="#B7D6EA"/>
+            <circle cx="53" cy="32" r="20" fill="#C9E1F0"/>
+            <circle cx="67" cy="43" r="15" fill="#AFCFE3"/>
+
+            <rect x="29" y="41"
+                  width="49" height="18"
+                  rx="9"
+                  fill="#BFD9EA"/>
+
+            <path d="M54 52 L43 72 L53 70 L47 91 L68 63 L57 65 L64 52 Z"
+                  fill="#F5C843"/>
+
+          </svg>
+
+          <span>
+            Lightning NO<sub>x</sub>
+          </span>
+
+        </div>
+
+
+        <!-- Convection -->
+
+        <div class="mini-uncertainty">
+
+          <svg viewBox="0 0 100 100">
+
+            <circle cx="38" cy="70" r="14" fill="#C7DFEF"/>
+            <circle cx="53" cy="63" r="18" fill="#B5D5E8"/>
+            <circle cx="68" cy="71" r="13" fill="#C7DFEF"/>
+
+            <path d="M42 58 L42 25
+                     M42 25 L35 33
+                     M42 25 L49 33"
+                  fill="none"
+                  stroke="#4B9ED1"
+                  stroke-width="4"
+                  stroke-linecap="round"/>
+
+            <path d="M61 56 L61 15
+                     M61 15 L54 23
+                     M61 15 L68 23"
+                  fill="none"
+                  stroke="#57B8C2"
+                  stroke-width="4"
+                  stroke-linecap="round"/>
+
+          </svg>
+
+          <span>Convection</span>
+
+        </div>
+
+
+        <!-- Biomass burning -->
+
+        <div class="mini-uncertainty">
+
+          <svg viewBox="0 0 100 100">
+
+            <path d="M49 88
+                     C32 88, 29 73, 37 62
+                     C44 53, 49 47, 49 34
+                     C63 45, 68 57, 64 67
+                     C73 62, 76 55, 74 48
+                     C87 65, 80 86, 62 89 Z"
+                  fill="#F28A45"/>
+
+            <path d="M54 83
+                     C44 83, 42 73, 47 67
+                     C52 61, 55 56, 55 49
+                     C64 59, 66 70, 61 76
+                     C67 73, 69 69, 69 65
+                     C75 75, 68 84, 54 83 Z"
+                  fill="#F7C34D"/>
+
+          </svg>
+
+          <span>Biomass burning</span>
+
+        </div>
+
+
+        <!-- Chemical kinetics -->
+
+        <div class="mini-uncertainty">
+
+          <svg viewBox="0 0 100 100">
+
+            <line x1="31" y1="52" x2="50" y2="36"
+                  stroke="#7A74C8"
+                  stroke-width="4"/>
+
+            <line x1="50" y1="36" x2="70" y2="52"
+                  stroke="#7A74C8"
+                  stroke-width="4"/>
+
+            <line x1="50" y1="36" x2="50" y2="68"
+                  stroke="#7A74C8"
+                  stroke-width="4"/>
+
+            <circle cx="27" cy="55" r="10" fill="#64BFC7"/>
+            <circle cx="50" cy="32" r="11" fill="#8B82D7"/>
+            <circle cx="74" cy="55" r="10" fill="#F0B95B"/>
+            <circle cx="50" cy="74" r="9" fill="#E98591"/>
+
+          </svg>
+
+          <span>Chemical kinetics</span>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- =======================================================
@@ -787,350 +1064,6 @@
     </div>
 
   </section>
-
-  <!-- =======================================================
-     UNCERTAINTIES
-     ======================================================= -->
-
-<section id="uncertainties" class="uncertainties-section">
-
-  <div class="section-inner">
-
-    <div class="uncertainties-heading">
-      <span class="section-kicker">UNCERTAINTIES</span>
-
-      <h2>
-        Key uncertainties
-      </h2>
-
-      <p>
-        Understanding tropical oxidising capacity depends on
-        constraining several important atmospheric processes.
-      </p>
-    </div>
-
-
-    <div class="uncertainty-grid">
-
-
-      <!-- ===================================================
-           1. BIOGENIC VOCs
-           =================================================== -->
-
-      <div class="uncertainty-item">
-
-        <div class="uncertainty-icon uncertainty-green">
-
-          <svg
-            viewBox="0 0 160 160"
-            role="img"
-            aria-label="Biogenic VOC emissions illustration">
-
-            <!-- tree trunk -->
-            <path
-              d="M79 105 L79 137"
-              fill="none"
-              stroke="#8B6748"
-              stroke-width="7"
-              stroke-linecap="round"/>
-
-            <!-- branches -->
-            <path
-              d="M79 118 L62 99 M79 113 L96 94"
-              fill="none"
-              stroke="#8B6748"
-              stroke-width="5"
-              stroke-linecap="round"/>
-
-            <!-- canopy -->
-            <circle cx="59" cy="91" r="23" fill="#7BCB86"/>
-            <circle cx="83" cy="75" r="29" fill="#54B96B"/>
-            <circle cx="105" cy="94" r="22" fill="#8AD394"/>
-            <circle cx="79" cy="99" r="26" fill="#65C47A"/>
-
-            <!-- VOC curves -->
-            <path
-              d="M58 62 C48 51, 58 43, 51 33"
-              fill="none"
-              stroke="#58BFC7"
-              stroke-width="4"
-              stroke-linecap="round"/>
-
-            <path
-              d="M83 48 C75 37, 87 30, 80 19"
-              fill="none"
-              stroke="#E7B94C"
-              stroke-width="4"
-              stroke-linecap="round"/>
-
-            <path
-              d="M106 65 C116 53, 106 44, 115 34"
-              fill="none"
-              stroke="#6F9FD8"
-              stroke-width="4"
-              stroke-linecap="round"/>
-
-            <!-- molecules -->
-            <circle cx="48" cy="27" r="5" fill="#58BFC7"/>
-            <circle cx="79" cy="15" r="5" fill="#E7B94C"/>
-            <circle cx="119" cy="28" r="5" fill="#6F9FD8"/>
-
-          </svg>
-
-        </div>
-
-        <h3>Biogenic VOCs</h3>
-
-      </div>
-
-
-
-      <!-- ===================================================
-           2. LIGHTNING NOx
-           =================================================== -->
-
-      <div class="uncertainty-item">
-
-        <div class="uncertainty-icon uncertainty-yellow">
-
-          <svg
-            viewBox="0 0 160 160"
-            role="img"
-            aria-label="Lightning NOx illustration">
-
-            <!-- cloud -->
-            <circle cx="58" cy="71" r="24" fill="#B7D6EA"/>
-            <circle cx="83" cy="58" r="31" fill="#C9E1F0"/>
-            <circle cx="108" cy="75" r="23" fill="#AFCFE3"/>
-
-            <rect
-              x="47"
-              y="70"
-              width="74"
-              height="28"
-              rx="14"
-              fill="#BFD9EA"/>
-
-            <!-- lightning -->
-            <path
-              d="M85 83 L69 112 L84 109 L75 139 L104 99 L88 102 L99 83 Z"
-              fill="#F5C843"/>
-
-            <!-- NOx dots -->
-            <circle cx="47" cy="115" r="5" fill="#6F9FD8"/>
-            <circle cx="117" cy="114" r="5" fill="#6F9FD8"/>
-            <circle cx="111" cy="130" r="3.5" fill="#58BFC7"/>
-
-          </svg>
-
-        </div>
-
-        <h3>Lightning NO<sub>x</sub></h3>
-
-      </div>
-
-
-
-      <!-- ===================================================
-           3. CONVECTION
-           =================================================== -->
-
-      <div class="uncertainty-item">
-
-        <div class="uncertainty-icon uncertainty-blue">
-
-          <svg
-            viewBox="0 0 160 160"
-            role="img"
-            aria-label="Atmospheric convection illustration">
-
-            <!-- lower cloud -->
-            <circle cx="58" cy="111" r="20" fill="#C7DFEF"/>
-            <circle cx="81" cy="100" r="27" fill="#B5D5E8"/>
-            <circle cx="106" cy="113" r="19" fill="#C7DFEF"/>
-
-            <rect
-              x="46"
-              y="109"
-              width="72"
-              height="22"
-              rx="11"
-              fill="#BDD9EA"/>
-
-            <!-- rising arrows -->
-            <path
-              d="M61 95 L61 48"
-              stroke="#4B9ED1"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M61 48 L51 60 M61 48 L71 60"
-              stroke="#4B9ED1"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M84 88 L84 27"
-              stroke="#57B8C2"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M84 27 L74 39 M84 27 L94 39"
-              stroke="#57B8C2"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M106 96 L106 55"
-              stroke="#6C8FD3"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M106 55 L96 67 M106 55 L116 67"
-              stroke="#6C8FD3"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-          </svg>
-
-        </div>
-
-        <h3>Convection</h3>
-
-      </div>
-
-
-
-      <!-- ===================================================
-           4. BIOMASS BURNING
-           =================================================== -->
-
-      <div class="uncertainty-item">
-
-        <div class="uncertainty-icon uncertainty-orange">
-
-          <svg
-            viewBox="0 0 160 160"
-            role="img"
-            aria-label="Biomass burning illustration">
-
-            <!-- small plant -->
-            <path
-              d="M48 123 L48 92"
-              stroke="#4F9C68"
-              stroke-width="6"
-              stroke-linecap="round"/>
-
-            <path
-              d="M48 105 C30 103, 29 89, 33 82 C47 82, 53 92, 48 105"
-              fill="#79C68B"/>
-
-            <path
-              d="M48 97 C62 91, 68 80, 65 72 C51 72, 43 83, 48 97"
-              fill="#58B86F"/>
-
-            <!-- flame outer -->
-            <path
-              d="M96 131
-                 C73 131, 65 116, 70 102
-                 C75 88, 89 80, 89 63
-                 C105 73, 116 91, 111 106
-                 C124 98, 129 86, 126 75
-                 C144 95, 142 116, 129 126
-                 C120 133, 107 135, 96 131 Z"
-              fill="#F28A45"/>
-
-            <!-- flame inner -->
-            <path
-              d="M101 125
-                 C88 125, 82 115, 86 105
-                 C90 96, 99 91, 100 80
-                 C112 91, 116 104, 110 112
-                 C116 110, 120 105, 120 100
-                 C128 112, 118 125, 101 125 Z"
-              fill="#F7C34D"/>
-
-            <!-- smoke -->
-            <circle cx="112" cy="55" r="8" fill="#C9CDD1"/>
-            <circle cx="123" cy="42" r="11" fill="#D8DBDE"/>
-            <circle cx="113" cy="30" r="7" fill="#E2E4E6"/>
-
-          </svg>
-
-        </div>
-
-        <h3>Biomass burning</h3>
-
-      </div>
-
-
-
-      <!-- ===================================================
-           5. CHEMICAL KINETICS
-           =================================================== -->
-
-      <div class="uncertainty-item">
-
-        <div class="uncertainty-icon uncertainty-purple">
-
-          <svg
-            viewBox="0 0 160 160"
-            role="img"
-            aria-label="Chemical kinetics illustration">
-
-            <!-- reaction bonds -->
-            <line x1="49" y1="78" x2="77" y2="57"
-                  stroke="#7A74C8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <line x1="78" y1="58" x2="107" y2="78"
-                  stroke="#7A74C8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <line x1="78" y1="58" x2="78" y2="101"
-                  stroke="#7A74C8"
-                  stroke-width="5"
-                  stroke-linecap="round"/>
-
-            <!-- atoms -->
-            <circle cx="43" cy="82" r="15" fill="#64BFC7"/>
-            <circle cx="79" cy="52" r="17" fill="#8B82D7"/>
-            <circle cx="115" cy="82" r="15" fill="#F0B95B"/>
-            <circle cx="79" cy="110" r="14" fill="#E98591"/>
-
-            <!-- reaction arrow -->
-            <path
-              d="M37 132 L118 132"
-              stroke="#555"
-              stroke-width="4"
-              stroke-linecap="round"/>
-
-            <path
-              d="M118 132 L108 124 M118 132 L108 140"
-              stroke="#555"
-              stroke-width="4"
-              stroke-linecap="round"/>
-
-          </svg>
-
-        </div>
-
-        <h3>Chemical kinetics</h3>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
 
   <!-- =======================================================
        PEOPLE
