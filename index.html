@@ -241,68 +241,68 @@
     }
 
     /* =========================================================
-   PROJECT FACTS
-   ========================================================= */
-
-.project-facts {
-  padding: 0 5%;
-
-  min-height: 112px;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  align-items: center;
-
-  background: #ffffff;
-
-  border-top: 1px solid #e4e7e7;
-  border-bottom: 1px solid #e4e7e7;
-}
-
-
-.fact {
-  min-height: 58px;
-
-  padding: 0 32px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  border-right: 1px solid #e4e7e7;
-}
-
-
-.fact:first-child {
-  padding-left: 0;
-}
-
-
-.fact:last-child {
-  border-right: none;
-}
-
-
-.fact-label {
-  margin-bottom: 5px;
-
-  font-size: 11px;
-  font-weight: 600;
-
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-
-  color: #8a9292;
-}
-
-
-.fact-value {
-  font-size: 17px;
-  font-weight: 500;
-
-  color: #242828;
-}
+     PROJECT FACTS
+     ========================================================= */
+  
+  .project-facts {
+    padding: 0 5%;
+  
+    min-height: 112px;
+  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+    align-items: center;
+  
+    background: #ffffff;
+  
+    border-top: 1px solid #e4e7e7;
+    border-bottom: 1px solid #e4e7e7;
+  }
+  
+  
+  .fact {
+    min-height: 58px;
+  
+    padding: 0 32px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    border-right: 1px solid #e4e7e7;
+  }
+  
+  
+  .fact:first-child {
+    padding-left: 0;
+  }
+  
+  
+  .fact:last-child {
+    border-right: none;
+  }
+  
+  
+  .fact-label {
+    margin-bottom: 5px;
+  
+    font-size: 11px;
+    font-weight: 600;
+  
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  
+    color: #8a9292;
+  }
+  
+  
+  .fact-value {
+    font-size: 17px;
+    font-weight: 500;
+  
+    color: #242828;
+  }
 
     /* =========================================================
        GENERAL SECTIONS
@@ -346,7 +346,7 @@
       color: #444;
     }
 
-    /* =========================================================
+/* =========================================================
    ABOUT + UNCERTAINTIES
    ========================================================= */
 
@@ -1814,7 +1814,1018 @@
 
   </footer>
 
+<script>
 
+/* =========================================================
+   DeTOX PEOPLE DATABASE
+   ========================================================= */
+
+const people = [
+
+  {
+    name: "Oliver Wild",
+    institution: "Lancaster University",
+    institutionKey: "Lancaster",
+    wp: ["WP2", "WP5"],
+    approach: ["FRS/GC", "UCI"],
+    role: "team",
+    photo: "images/people/oliver-wild.jpg"
+  },
+
+  {
+    name: "Alex Archibald",
+    institution: "University of Cambridge",
+    institutionKey: "Cambridge",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/alex-archibald.jpg"
+  },
+
+  {
+    name: "Paul Griffiths",
+    institution: "University of Bristol",
+    institutionKey: "Bristol",
+    wp: ["WP1"],
+    approach: ["GEOS-Chem"],
+    role: "team",
+    photo: "images/people/paul-griffiths.jpg"
+  },
+
+  {
+    name: "David Stevenson",
+    institution: "University of Edinburgh",
+    institutionKey: "Edinburgh",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/david-stevenson.jpg"
+  },
+
+  {
+    name: "Fiona O'Connor",
+    institution: "University of Exeter",
+    institutionKey: "Exeter",
+    wp: ["WP4"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/fiona-oconnor.jpg"
+  },
+
+  {
+    name: "James Weber",
+    institution: "University of Reading",
+    institutionKey: "Reading",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/james-weber.jpg"
+  },
+
+  {
+    name: "William Collins",
+    institution: "University of Reading",
+    institutionKey: "Reading",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/william-collins.jpg"
+  },
+
+  {
+    name: "Henry Moss",
+    institution: "Lancaster University",
+    institutionKey: "Lancaster",
+    wp: ["WP3"],
+    approach: ["Mathematics"],
+    role: "team",
+    photo: "images/people/henry-moss.jpg"
+  },
+
+  {
+    name: "Ryan Hossaini",
+    institution: "Lancaster University",
+    institutionKey: "Lancaster",
+    wp: ["WP1"],
+    approach: ["FRS/GC", "UCI"],
+    role: "team",
+    photo: "images/people/ryan-hossaini.jpg"
+  },
+
+  {
+    name: "Ye Wang",
+    institution: "Lancaster University",
+    institutionKey: "Lancaster",
+    wp: ["WP1"],
+    approach: ["FRS/GC", "UCI"],
+    role: "team",
+    photo: "images/people/ye-wang.jpg"
+  },
+
+  {
+    name: "Glen Chua",
+    institution: "University of Cambridge",
+    institutionKey: "Cambridge",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/glen-chua.jpg"
+  },
+
+  {
+    name: "Rayne Holland",
+    institution: "University of Bristol",
+    institutionKey: "Bristol",
+    wp: ["WP1"],
+    approach: ["GEOS-Chem"],
+    role: "team",
+    photo: "images/people/rayne-holland.jpg"
+  },
+
+  {
+    name: "Ryan Pound",
+    institution: "University of Reading",
+    institutionKey: "Reading",
+    wp: ["WP1"],
+    approach: ["UKCA"],
+    role: "team",
+    photo: "images/people/ryan-pound.jpg"
+  },
+
+  {
+    name: "James Lee",
+    institution: "University of York",
+    institutionKey: "York",
+    wp: ["WP1"],
+    approach: ["Observation"],
+    role: "team",
+    photo: "images/people/james-lee.jpg"
+  },
+
+
+  /* =======================================================
+     ADVISERS
+     ======================================================= */
+
+  {
+    name: "Kazuyuki Miyazaki",
+    institution: "NASA Jet Propulsion Laboratory",
+    institutionKey: "NASA JPL",
+    wp: [],
+    approach: [],
+    role: "adviser",
+    photo: "images/people/kazuyuki-miyazaki.jpg"
+  },
+
+  {
+    name: "Lee Murray",
+    institution: "University of Rochester",
+    institutionKey: "Rochester",
+    wp: [],
+    approach: [],
+    role: "adviser",
+    photo: "images/people/lee-murray.jpg"
+  },
+
+  {
+    name: "Benjamin Gaubert",
+    institution: "NSF National Center for Atmospheric Research",
+    institutionKey: "NCAR",
+    wp: [],
+    approach: [],
+    role: "adviser",
+    photo: "images/people/benjamin-gaubert.jpg"
+  }
+
+];
+
+
+
+/* =========================================================
+   PAGE ELEMENTS
+   ========================================================= */
+
+const peopleGrid =
+  document.getElementById("people-grid");
+
+const secondaryFilters =
+  document.getElementById("secondary-filters");
+
+const primaryButtons =
+  document.querySelectorAll(".primary-filter-btn");
+
+
+
+/* =========================================================
+   GET INITIALS
+   ========================================================= */
+
+function getInitials(name) {
+
+  return name
+    .split(" ")
+    .map(part => part.charAt(0))
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
+}
+
+
+
+/* =========================================================
+   CREATE PERSON CARD
+   ========================================================= */
+
+function createPersonCard(person) {
+
+  const card =
+    document.createElement("div");
+
+  card.className = "person-card";
+
+  if (person.role === "adviser") {
+    card.classList.add("adviser-card");
+  }
+
+
+  card.dataset.role =
+    person.role;
+
+  card.dataset.wp =
+    person.wp.join("|");
+
+  card.dataset.approach =
+    person.approach.join("|");
+
+  card.dataset.institution =
+    person.institutionKey;
+
+
+  /* -----------------------------------------
+     Tags
+     ----------------------------------------- */
+
+  let tags = "";
+
+
+  if (person.role === "team") {
+
+    person.wp.forEach(wp => {
+
+      tags += `
+        <span class="tag tag-wp">
+          ${wp}
+        </span>
+      `;
+
+    });
+
+
+    person.approach.forEach(approach => {
+
+      tags += `
+        <span class="tag tag-approach">
+          ${approach}
+        </span>
+      `;
+
+    });
+
+  }
+
+
+  else {
+
+    tags += `
+      <span class="tag tag-adviser">
+        Adviser
+      </span>
+    `;
+
+  }
+
+
+  /* -----------------------------------------
+     Card
+     ----------------------------------------- */
+
+  card.innerHTML = `
+
+    <div class="person-card-inner">
+
+      <div class="person-photo-wrap">
+
+        <span class="person-initials">
+          ${getInitials(person.name)}
+        </span>
+
+        <img
+          src="${person.photo}"
+          class="person-photo"
+          alt="${person.name}"
+          loading="lazy">
+
+      </div>
+
+
+      <div class="person-info">
+
+        <h3>
+          ${person.name}
+        </h3>
+
+        <p class="person-institution">
+          ${person.institution}
+        </p>
+
+
+        <div class="person-tags">
+          ${tags}
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  /* If photo cannot be found,
+     remove it and reveal initials */
+
+  const image =
+    card.querySelector(".person-photo");
+
+
+  image.addEventListener("error", () => {
+
+    image.remove();
+
+  });
+
+
+  return card;
+
+}
+
+
+
+/* =========================================================
+   BUILD ALL PEOPLE
+   ========================================================= */
+
+function renderPeople() {
+
+  const fragment =
+    document.createDocumentFragment();
+
+
+  people.forEach(person => {
+
+    fragment.appendChild(
+      createPersonCard(person)
+    );
+
+  });
+
+
+  peopleGrid.appendChild(fragment);
+
+}
+
+
+renderPeople();
+
+
+
+/* =========================================================
+   HELPER: ALL PERSON CARDS
+   ========================================================= */
+
+function getCards() {
+
+  return Array.from(
+    peopleGrid.querySelectorAll(".person-card")
+  );
+
+}
+
+
+
+/* =========================================================
+   BUILD SECONDARY FILTER BUTTONS
+   ========================================================= */
+
+function uniqueSorted(values) {
+
+  return [...new Set(values)].sort(
+    (a, b) =>
+      a.localeCompare(
+        b,
+        undefined,
+        { numeric: true }
+      )
+  );
+
+}
+
+
+function buildSecondaryFilters(mode) {
+
+  secondaryFilters.innerHTML = "";
+
+
+  let values = [];
+
+
+  /* Work Package */
+
+  if (mode === "wp") {
+
+    values = uniqueSorted(
+
+      people
+        .filter(person =>
+          person.role === "team"
+        )
+        .flatMap(person =>
+          person.wp
+        )
+
+    );
+
+  }
+
+
+  /* Approach */
+
+  else if (mode === "approach") {
+
+    values = uniqueSorted(
+
+      people
+        .filter(person =>
+          person.role === "team"
+        )
+        .flatMap(person =>
+          person.approach
+        )
+
+    );
+
+  }
+
+
+  /* Institution */
+
+  else if (mode === "institution") {
+
+    values = uniqueSorted(
+
+      people
+        .filter(person =>
+          person.role === "team"
+        )
+        .map(person =>
+          person.institutionKey
+        )
+
+    );
+
+  }
+
+
+  if (values.length === 0) {
+
+    secondaryFilters.classList.remove(
+      "visible"
+    );
+
+    return;
+
+  }
+
+
+  values.forEach(value => {
+
+    const button =
+      document.createElement("button");
+
+
+    button.className =
+      "secondary-filter-btn";
+
+
+    button.textContent =
+      value;
+
+
+    button.dataset.mode =
+      mode;
+
+
+    button.dataset.value =
+      value;
+
+
+    button.addEventListener(
+      "click",
+      () => {
+
+
+        secondaryFilters
+          .querySelectorAll(
+            ".secondary-filter-btn"
+          )
+          .forEach(btn =>
+            btn.classList.remove("active")
+          );
+
+
+        button.classList.add("active");
+
+
+        filterCards(
+          mode,
+          value
+        );
+
+      }
+    );
+
+
+    secondaryFilters.appendChild(
+      button
+    );
+
+  });
+
+
+  requestAnimationFrame(() => {
+
+    secondaryFilters.classList.add(
+      "visible"
+    );
+
+  });
+
+}
+
+
+
+/* =========================================================
+   DETERMINE WHETHER A CARD MATCHES
+   ========================================================= */
+
+function cardMatches(
+  card,
+  mode,
+  value
+) {
+
+  if (mode === "all") {
+
+    return true;
+
+  }
+
+
+  if (mode === "adviser") {
+
+    return (
+      card.dataset.role === "adviser"
+    );
+
+  }
+
+
+  if (mode === "wp") {
+
+    return card.dataset.wp
+      .split("|")
+      .filter(Boolean)
+      .includes(value);
+
+  }
+
+
+  if (mode === "approach") {
+
+    return card.dataset.approach
+      .split("|")
+      .filter(Boolean)
+      .includes(value);
+
+  }
+
+
+  if (mode === "institution") {
+
+    return (
+      card.dataset.institution === value
+    );
+
+  }
+
+
+  return true;
+
+}
+
+
+
+/* =========================================================
+   FLUID FILTER ANIMATION
+   ========================================================= */
+
+async function filterCards(
+  mode,
+  value = null
+) {
+
+  const cards =
+    getCards();
+
+
+  /*
+     Cancel animations already in progress
+     if the user clicks another filter quickly.
+  */
+
+  cards.forEach(card => {
+
+    card.getAnimations().forEach(
+      animation =>
+        animation.cancel()
+    );
+
+  });
+
+
+  /*
+     Record the current position of every
+     visible card.
+  */
+
+  const firstPositions =
+    new Map();
+
+
+  cards.forEach(card => {
+
+    if (!card.hidden) {
+
+      firstPositions.set(
+        card,
+        card.getBoundingClientRect()
+      );
+
+    }
+
+  });
+
+
+  /*
+     Decide which cards belong
+     in the next state.
+  */
+
+  const shouldShow =
+    new Map();
+
+
+  cards.forEach(card => {
+
+    shouldShow.set(
+      card,
+      cardMatches(
+        card,
+        mode,
+        value
+      )
+    );
+
+  });
+
+
+  /*
+     Cards that are about to leave
+     fade and shrink first.
+  */
+
+  const leaving =
+    cards.filter(card =>
+      !card.hidden
+      &&
+      !shouldShow.get(card)
+    );
+
+
+  const leavingAnimations =
+    leaving.map(card => {
+
+      return card.animate(
+
+        [
+          {
+            opacity: 1,
+            transform: "scale(1)"
+          },
+
+          {
+            opacity: 0,
+            transform: "scale(0.93)"
+          }
+        ],
+
+        {
+          duration: 170,
+          easing: "ease-out",
+          fill: "forwards"
+        }
+
+      );
+
+    });
+
+
+  await Promise.all(
+
+    leavingAnimations.map(animation =>
+      animation.finished.catch(() => {})
+    )
+
+  );
+
+
+  /*
+     Hide leaving cards.
+  */
+
+  leaving.forEach(card => {
+
+    card.hidden = true;
+
+    card.getAnimations().forEach(
+      animation =>
+        animation.cancel()
+    );
+
+  });
+
+
+  /*
+     Reveal cards that need to enter.
+  */
+
+  const entering =
+    cards.filter(card =>
+      card.hidden
+      &&
+      shouldShow.get(card)
+    );
+
+
+  entering.forEach(card => {
+
+    card.hidden = false;
+
+    card.style.opacity = "0";
+
+  });
+
+
+  /*
+     Record new positions after layout changes.
+  */
+
+  const lastPositions =
+    new Map();
+
+
+  cards.forEach(card => {
+
+    if (!card.hidden) {
+
+      lastPositions.set(
+        card,
+        card.getBoundingClientRect()
+      );
+
+    }
+
+  });
+
+
+  /*
+     Animate cards that stay visible
+     from old position to new position.
+
+     This is the FLIP technique:
+     First → Last → Invert → Play.
+  */
+
+  cards.forEach(card => {
+
+    if (
+      card.hidden
+      ||
+      !firstPositions.has(card)
+      ||
+      !lastPositions.has(card)
+    ) {
+
+      return;
+
+    }
+
+
+    const first =
+      firstPositions.get(card);
+
+    const last =
+      lastPositions.get(card);
+
+
+    const deltaX =
+      first.left - last.left;
+
+    const deltaY =
+      first.top - last.top;
+
+
+    if (
+      Math.abs(deltaX) < 1
+      &&
+      Math.abs(deltaY) < 1
+    ) {
+
+      return;
+
+    }
+
+
+    card.animate(
+
+      [
+        {
+          transform:
+            `translate(${deltaX}px, ${deltaY}px)`
+        },
+
+        {
+          transform:
+            "translate(0, 0)"
+        }
+      ],
+
+      {
+        duration: 480,
+
+        easing:
+          "cubic-bezier(0.22, 1, 0.36, 1)"
+      }
+
+    );
+
+  });
+
+
+  /*
+     Newly appearing cards
+     fade and rise into place.
+  */
+
+  entering.forEach(card => {
+
+    card.animate(
+
+      [
+        {
+          opacity: 0,
+          transform:
+            "translateY(12px) scale(0.94)"
+        },
+
+        {
+          opacity: 1,
+          transform:
+            "translateY(0) scale(1)"
+        }
+      ],
+
+      {
+        duration: 380,
+
+        delay: 60,
+
+        easing:
+          "cubic-bezier(0.22, 1, 0.36, 1)",
+
+        fill: "forwards"
+      }
+
+    ).finished.then(() => {
+
+      card.style.opacity = "";
+
+    }).catch(() => {});
+
+  });
+
+}
+
+
+
+/* =========================================================
+   PRIMARY FILTER BUTTONS
+   ========================================================= */
+
+primaryButtons.forEach(button => {
+
+  button.addEventListener(
+    "click",
+    () => {
+
+
+      const mode =
+        button.dataset.mode;
+
+
+      /*
+         Active primary button
+      */
+
+      primaryButtons.forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+
+      button.classList.add("active");
+
+
+      /*
+         Hide old secondary row
+      */
+
+      secondaryFilters.classList.remove(
+        "visible"
+      );
+
+
+      /*
+         Everyone
+      */
+
+      if (mode === "all") {
+
+        secondaryFilters.innerHTML = "";
+
+        filterCards("all");
+
+        return;
+
+      }
+
+
+      /*
+         Advisers
+      */
+
+      if (mode === "adviser") {
+
+        secondaryFilters.innerHTML = "";
+
+        filterCards("adviser");
+
+        return;
+
+      }
+
+
+      /*
+         Work Package / Approach / Institution
+
+         Show everyone first, then reveal
+         the appropriate secondary buttons.
+      */
+
+      filterCards("all");
+
+
+      setTimeout(() => {
+
+        buildSecondaryFilters(mode);
+
+      }, 120);
+
+    }
+  );
+
+});
+
+</script>
 </body>
 
 </html>
