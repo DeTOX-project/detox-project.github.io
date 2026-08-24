@@ -428,26 +428,42 @@
     
     /* tablet / mobile */
     
-    @media (max-width: 900px) {
-    
-      .about-layout {
+   @media (max-width: 800px) {
+
+      .hero {
         grid-template-columns: 1fr;
-        gap: 45px;
+    
+        gap: 40px;
+    
+        padding: 45px 7% 55px;
       }
     
     
-      .about-uncertainties {
-        padding-left: 0;
+      .hero-right {
+        transform: none;
       }
     
-    }
+    
+      .detox-title h1 {
+        font-size: 64px;
+      }
     
     
-    @media (max-width: 600px) {
+      .globe {
+        width: 110px;
+        height: 110px;
+      }
     
-      .mini-uncertainty-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+    
+      .project-title {
+        margin-top: 30px;
+    
+        font-size: 23px;
+      }
+    
+    
+      .project-intro {
+        margin-top: 36px;
       }
     
     }
