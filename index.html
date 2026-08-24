@@ -427,7 +427,64 @@
     .mini-uncertainty:hover {
       transform: translateY(-3px);
     }
+
+    /* =========================================================
+   ABOUT + UNCERTAINTIES - RESPONSIVE
+   ========================================================= */
+
+    @media (max-width: 900px) {
     
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    
+      .about-text p {
+        max-width: none;
+        width: 100%;
+      }
+    
+      .about-uncertainties {
+        padding-left: 0;
+        width: 100%;
+      }
+    
+      .mini-uncertainty-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: 100%;
+        gap: 20px 12px;
+      }
+    }
+    
+    
+    @media (max-width: 600px) {
+    
+      .about-layout {
+        gap: 32px;
+      }
+    
+      .mini-uncertainty-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 14px;
+      }
+    
+      .mini-uncertainty {
+        min-width: 0;
+      }
+    
+      .mini-uncertainty svg {
+        width: 60px;
+        height: 60px;
+      }
+    
+      .mini-uncertainty span {
+        font-size: 11px;
+        line-height: 1.3;
+    
+        overflow-wrap: anywhere;
+      }
+    }
+        
     
     /* tablet / mobile */
     
