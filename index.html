@@ -527,6 +527,36 @@
       }
     
     }
+
+    @media (max-width: 600px) {
+
+      .project-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+        padding: 14px 6%;
+    
+        min-height: auto;
+      }
+    
+      .fact {
+        min-width: 0;
+    
+        padding: 16px 12px;
+    
+        border-right: none;
+      }
+    
+      .fact:first-child {
+        padding-left: 12px;
+      }
+    
+      .fact-value {
+        font-size: 15px;
+    
+        overflow-wrap: anywhere;
+      }
+    
+    }
     
     /* =========================================================
        RESEARCH CARDS
@@ -1132,6 +1162,9 @@
         margin-top: 36px;
       }
 
+      .project-facts {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
 
       .themes {
         grid-template-columns: 1fr;
