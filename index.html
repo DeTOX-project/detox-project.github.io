@@ -89,21 +89,24 @@
    ========================================================= */
 
 .hero {
-  min-height: 670px;
+  min-height: clamp(520px, 70vh, 760px);
 
-  padding: 55px 4% 60px;
+  padding:
+    clamp(32px, 4vw, 60px)
+    clamp(24px, 4vw, 64px);
 
   background: #eef3f3;
 
   display: grid;
 
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
 
-  gap: 55px;
+  gap: clamp(28px, 4vw, 55px);
 
   align-items: center;
 }
-
 
 /* -------------------------
    LEFT SIDE
