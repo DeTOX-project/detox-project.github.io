@@ -84,168 +84,162 @@
     }
 
 
-    /* =========================================================
-       HERO
-       ========================================================= */
+/* =========================================================
+   HERO
+   ========================================================= */
 
-    .hero {
-      min-height: 670px;
+.hero {
+  min-height: 670px;
 
-      padding: 55px 4% 60px;
+  padding: 55px 4% 60px;
 
-      background: #eef3f3;
+  background: #eef3f3;
 
-      display: grid;
+  display: grid;
 
-    .hero {
-      display: grid;
-    
-      grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(0, 0.95fr);
-    
-      gap: clamp(28px, 4vw, 55px);
-    
-      align-items: center;
-    }
+  grid-template-columns: 1.05fr 0.95fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
 
 
-    /* -------------------------
-       LEFT SIDE
-       ------------------------- */
+/* -------------------------
+   LEFT SIDE
+   ------------------------- */
 
-    .hero-left {
-      max-width: 720px;
-    }
-
-
-    .detox-title {
-      display: flex;
-
-      align-items: center;
-
-      gap: 8px;
-    }
+.hero-left {
+  max-width: 720px;
+}
 
 
-    .detox-title h1 {
-      margin: 0;
-    
-      font-family: "Outfit", sans-serif;
-    
-      font-size: 82px;
-      font-weight: 600;
-    
-      line-height: 1;
-    
-      letter-spacing: -3px;
-    
-      color: #202020;
-    }
+.detox-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
 
 
-    .globe {
-      width: 130px;
+.detox-title h1 {
+  margin: 0;
 
-      height: 130px;
+  font-family: "Outfit", sans-serif;
 
-      object-fit: contain;
+  font-size: 82px;
 
-      display: block;
-    }
+  font-weight: 600;
 
+  line-height: 1;
 
-    .project-title {
-      margin-top: 42px;
+  letter-spacing: -3px;
 
-      margin-bottom: 0;
-
-      max-width: 670px;
-
-      font-size: 26px;
-
-      font-weight: 400;
-
-      line-height: 1.35;
-
-      color: #444;
-    }
+  color: #202020;
+}
 
 
-    .project-intro {
-      margin-top: 62px;
+.globe {
+  width: 130px;
 
-      margin-bottom: 0;
+  height: 130px;
 
-      max-width: 700px;
+  object-fit: contain;
 
-      font-size: 18px;
-
-      line-height: 1.5;
-
-      color: #444;
-    }
+  display: block;
+}
 
 
-    .partner-logos {
-      margin-top: 35px;
+.project-title {
+  margin-top: 42px;
 
-      max-width: 650px;
-    }
+  margin-bottom: 0;
+
+  max-width: 670px;
+
+  font-size: 26px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+
+  color: #444;
+}
 
 
-    .partner-logos img {
-      width: 100%;
+.project-intro {
+  margin-top: 62px;
 
-      height: auto;
+  margin-bottom: 0;
 
-      display: block;
+  max-width: 700px;
 
-      object-fit: contain;
-    }
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #444;
+}
 
 
-    /* -------------------------
-       RIGHT SIDE
-       ------------------------- */
-    .hero {
-      min-height: 670px;
-      padding: 55px 4% 60px;
-      background: #eef3f3;
-    
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 55px;
-    
-      align-items: center;
-    }
-    
-    .hero-left {
-      min-width: 0;
-    }
-    
-    .hero-right {
-      min-width: 0;
-    
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    
-      gap: 18px;
-    
-      transform: translateY(35px);
-    }
-    
-    .hero-right img {
-      display: block;
-    
-      width: 100%;
-      height: auto;
-    
-      max-width: 100%;
-    
-      object-fit: contain;
-    }
+.partner-logos {
+  margin-top: 35px;
+
+  max-width: 650px;
+}
+
+
+.partner-logos img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* -------------------------
+   RIGHT SIDE
+   ------------------------- */
+
+.hero-right {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  transform: translateY(35px);
+}
+
+
+.hero-right img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  border-radius: 5px;
+
+  background: white;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.hero-right img:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10);
+}
     /* =========================================================
      PROJECT FACTS
      ========================================================= */
