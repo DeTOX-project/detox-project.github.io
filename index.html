@@ -1831,85 +1831,109 @@
     
     </div>
 
-        <!-- Boundary layer mixing -->
+      <!-- Boundary layer mixing -->
 
-      <div class="mini-uncertainty">
-      
-        <svg viewBox="0 0 100 100">
-      
-          <!-- ground -->
-          <path d="M12 82 L88 82"
-                stroke="#75B783"
-                stroke-width="4"
-                stroke-linecap="round"/>
-      
-      
-          <!-- boundary layer top -->
-          <path d="M15 31 L85 31"
-                stroke="#AEBBC3"
-                stroke-width="2.5"
-                stroke-dasharray="6 5"
-                stroke-linecap="round"/>
-      
-      
-          <!-- turbulent mixing paths -->
-      
-          <path d="M30 73
-                   C20 63, 40 56, 30 47
-                   C23 41, 31 37, 35 33"
-                fill="none"
-                stroke="#58BFC7"
-                stroke-width="3.5"
-                stroke-linecap="round"/>
-      
-      
-          <path d="M51 75
-                   C63 66, 43 58, 54 50
-                   C64 43, 54 38, 51 34"
-                fill="none"
-                stroke="#6EA6CF"
-                stroke-width="3.5"
-                stroke-linecap="round"/>
-      
-      
-          <path d="M72 72
-                   C62 64, 79 57, 69 48
-                   C63 42, 71 37, 74 34"
-                fill="none"
-                stroke="#7A74C8"
-                stroke-width="3.5"
-                stroke-linecap="round"/>
-      
-      
-          <!-- small directional arrows -->
-      
-          <path d="M31 39 L35 33 L38 39"
-                fill="none"
-                stroke="#58BFC7"
-                stroke-width="2.5"
-                stroke-linecap="round"/>
-      
-          <path d="M47 40 L51 34 L55 40"
-                fill="none"
-                stroke="#6EA6CF"
-                stroke-width="2.5"
-                stroke-linecap="round"/>
-      
-          <path d="M70 40 L74 34 L78 40"
-                fill="none"
-                stroke="#7A74C8"
-                stroke-width="2.5"
-                stroke-linecap="round"/>
-      
-        </svg>
-      
-        <span>
-          Boundary layer<br>
-          mixing
-        </span>
-      
-      </div>
+<div class="mini-uncertainty">
 
+  <svg viewBox="0 0 100 100">
+
+    <!-- boundary layer background -->
+
+    <rect
+      x="12"
+      y="35"
+      width="76"
+      height="47"
+      rx="3"
+      fill="#EAF4F7"
+    />
+
+
+    <!-- PBL top -->
+
+    <path
+      d="M12 35 L88 35"
+      stroke="#7FAFC4"
+      stroke-width="2.5"
+      stroke-dasharray="5 5"
+      stroke-linecap="round"
+    />
+
+
+    <!-- upward mixing arrow -->
+
+    <path
+      d="M30 72 L30 47"
+      stroke="#58BFC7"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M24 53 L30 46 L36 53"
+      fill="none"
+      stroke="#58BFC7"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+
+    <!-- downward mixing arrow -->
+
+    <path
+      d="M50 46 L50 70"
+      stroke="#6EA6CF"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M44 64 L50 71 L56 64"
+      fill="none"
+      stroke="#6EA6CF"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+
+    <!-- upward mixing arrow -->
+
+    <path
+      d="M70 72 L70 47"
+      stroke="#7A74C8"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M64 53 L70 46 L76 53"
+      fill="none"
+      stroke="#7A74C8"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+
+    <!-- surface -->
+
+    <path
+      d="M10 82 L90 82"
+      stroke="#75B783"
+      stroke-width="4"
+      stroke-linecap="round"
+    />
+
+  </svg>
+
+  <span>
+    Boundary layer<br>
+    mixing
+  </span>
+
+</div>
       </div>
 
     </div>
