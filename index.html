@@ -385,48 +385,60 @@
     }
     
     
-    .mini-uncertainty-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px 16px;
-    }
-    
-    
-    .mini-uncertainty {
-      text-align: center;
-    }
-    
-    
-    .mini-uncertainty svg {
-      width: 72px;
-      height: 72px;
-    
-      display: block;
-    
-      margin: 0 auto 9px;
-    }
-    
-    
-    .mini-uncertainty span {
-      display: block;
-    
-      font-size: 12px;
-      line-height: 1.25;
-    
-      color: #444;
-    }
-    
-    
-    /* subtle hover */
-    
-    .mini-uncertainty {
-      transition: transform 0.2s ease;
-    }
-    
-    
-    .mini-uncertainty:hover {
-      transform: translateY(-3px);
-    }
+.mini-uncertainty-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 26px 20px;
+
+  align-items: start;
+}
+
+
+.mini-uncertainty {
+  min-height: 118px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  transition: transform 0.2s ease;
+}
+
+
+.mini-uncertainty:hover {
+  transform: translateY(-3px);
+}
+
+
+.mini-uncertainty svg {
+  width: 68px;
+  height: 68px;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  margin: 0 auto 10px;
+}
+
+
+.mini-uncertainty span {
+  display: block;
+
+  max-width: 110px;
+
+  font-size: 12px;
+  line-height: 1.3;
+
+  color: #444;
+}
 
     /* =========================================================
    ABOUT + UNCERTAINTIES - RESPONSIVE
